@@ -1,0 +1,301 @@
+@import url("https://use.typekit.net/tcu4wwf.css");
+
+h1{
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 42px;
+    margin:0;
+    color: #fff;
+}
+
+h2{
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+h3{
+    font-family: merriweather,serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    margin-top:0;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color:#07ADA1;
+}
+
+p{
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16px;
+    color: #fff;
+}
+
+.contact-button a, .burger-menu{
+    cursor: pointer;
+}
+
+.contact-button a:hover{
+    color:#07ADA1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background-color: #000;
+}
+
+.header {
+    text-align:center;
+    padding:50px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*********************************************/
+/***************** Gallery *******************/
+/*********************************************/
+
+.row {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.column{   
+    flex: 1 1 17em;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/*********** 01 Gallery Animation ************/
+.column img{
+    padding:4px;
+    width:100%;
+    vertical-align: middle;
+    filter: grayscale(1);
+    transition: all .1s ease-in-out;
+}
+
+.column img:hover {
+    transform: scale(1.2);
+    filter: none;
+  }
+
+
+/****************** About ********************/
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    padding: 0 20px;
+}
+
+.about-content {
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    background-color: #07ADA1;
+    border-radius: 100px;
+    padding: 15px 35px;
+    border: none;
+    color: #fff;
+    margin-left:25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #118E84;
+}
+
+.contact-icons-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;  
+    margin-bottom: 20px; 
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+/*********************************************/
+/**************** Testimonial ****************/
+/*********************************************/
+
+.testimonial {
+    margin-top: 120px;
+    text-align: center;
+}
+
+img.quote {
+    width: 40%;
+    margin-top: 40px;
+}
+
+p.feedback {
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.feedback {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16px;
+    color: #fff;
+    width: 50%;
+    margin: auto;
+}
+
+.feedback:after {
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    content: "";
+  }
+
+
+/********* 02 Testimonial Animation **********/
+
+@keyframes slide {
+    0% {
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque dui, consectetur sit amet lectus eu, congue tincidunt libero. Nam in ipsum convallis, sollicitudin mi quis, consectetur enim. Aliquam aliquam risus id dolor semper aliquet.";
+    }
+    50% {
+      content: "Cras tincidunt massa at nisl efficitur, quis ullamcorper purus viverra. Duis leo purus, ornare sit amet augue dictum, hendrerit sodales nunc. Ut sagittis sit amet lorem non rutrum. Phasellus laoreet ligula nulla, ut suscipit augue finibus in.";
+    }
+    75% {
+      content: "Fusce magna justo, mollis sit amet elementum at, ultrices venenatis nunc. Aenean dapibus ante sodales, efficitur ante a, blandit nunc. Donec porta, ex quis faucibus tincidunt, nisl lectus congue orci, sed eleifend arcu mauris at augue.";
+    }
+    100% {
+      content: "Praesent sollicitudin urna eu lacinia porta. Maecenas ut felis sed orci maximus tristique vulputate a est. Duis et dolor sed nibh volutpat mattis sit amet eget ante.  Fusce quis iaculis arcu. Quisque teus eu, convallis ornare tortor.";
+    }
+  }
+
+
+/*********************************************/
+/******************* Cards *******************/
+/*********************************************/
+
+.prices {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:40px;
+    flex-direction: column;
+}
+
+h3.text-card {
+    font-size: 11px;
+    letter-spacing: 6px;
+}
+
+p.price.standard {
+    color: #000;
+}
+
+.card{
+    border: solid 3px #fff;
+    padding: 100px 40px;
+    width: 100%;
+    margin: 10px;
+}
+
+.card.standard {
+    background-color: #fff;
+}
+
+.card.standard h2 {
+    color:#000;
+}
+
+.card-btn {
+    margin-left:0;
+}
+
+p.footer {
+    border-top: solid 1px white;
+    margin-top: 50px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/****************** Desktop ******************/
+
+@media screen and (min-width:720px) {
+    h1{
+        font-size: 62px;
+    }
+    
+    h2{
+        font-size: 42px;
+    }
+
+    .about {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 120px;
+    }
+    .main-content{
+        width:1280px;
+        margin:auto;
+    }
+
+    .text {
+        width: 70%;
+    }
+
+    .contact-icons-btns {
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    img.quote {
+        width: 20%;
+    }
+
+    .contact-icons-btns {
+        margin-top: 50px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+    
+    .card.basic {
+        margin-right: 20px;
+    }
+
+    .card.standard {
+        padding: 120px 45px;
+    }
+    
+    .card.premium {
+        margin-left: 20px;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+}
