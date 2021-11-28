@@ -12,41 +12,52 @@
                 <img src="images/burger-menu.svg" alt="placeholder">
             </div>
             <div class="logo">
-                <h1>Rafael Barros</h1>
-                <h3>PHOTOGRAPHY</h3>
+                <img src="images/logo.svg" alt="placeholder">
             </div>
             <div class="contact-button">
                 <p><a>CONTACT</a></p>
             </div>
         </div>
 
+        <div class="video-container">
+            <video autoplay muted loop>
+                <!-- Video by Rafael Barros Baldin -->
+                <source src="images/top-video_SparkVideo.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                <h2>WELCOME</h2>
+                <h1>Here I transform <br>places into memories.</h1>
+                <button class="top-btn">CONTACT ME</button>
+            </div>
+        </div>
+
         <div class="row images-gallery">
             <div class="column">
                 <!-- All images by Rafael Barros Baldin -->
-                <img src="images/01.jpg" alt="seagal-sydney">
-                <img src="images/02.jpg" alt="stanley-park">
-                <img src="images/03.jpg" alt="harbour-bridge">
+                <div class="indiv-img"><img src="images/01.jpg" alt="seagal-sydney"></div>
+                <div class="indiv-img"><img src="images/02.jpg" alt="stanley-park"></div>
+                <div class="indiv-img"><img src="images/03.jpg" alt="harbour-bridge"></div>
             </div>
 
             <div class="column">
                 <!-- All images by Rafael Barros Baldin -->
-                <img src="images/04.jpg" alt="church">
-                <img src="images/05.jpg" alt="vancouver-fall">
-                <img src="images/06.jpg" alt="strathfield-sydney">
+                <div class="indiv-img"><img src="images/04.jpg" alt="church"></div>
+                <div class="indiv-img"><img src="images/05.jpg" alt="vancouver-fall"></div>
+                <div class="indiv-img"><img src="images/06.jpg" alt="strathfield-sydney"></div>
             </div>
 
             <div class="column">
                 <!-- All images by Rafael Barros Baldin -->
-                <img src="images/07.jpg" alt="opera-house">
-                <img src="images/08.jpg" alt="dog-park">
-                <img src="images/09.jpg" alt="vancouver-mountains">
+                <div class="indiv-img"><img src="images/07.jpg" alt="opera-house"></div>
+                <div class="indiv-img"><img src="images/08.jpg" alt="dog-park"></div>
+                <div class="indiv-img"><img src="images/09.jpg" alt="vancouver-mountains"></div>
             </div>
 
             <div class="column">
                 <!-- All images by Rafael Barros Baldin -->
-                <img src="images/10.jpg" alt="mango-cat">
-                <img src="images/11.jpg" alt="harbour-bridge-sydney">
-                <img src="images/12.jpg" alt="black-duck">
+                <div class="indiv-img"><img src="images/10.jpg" alt="mango-cat"></div>
+                <div class="indiv-img"><img src="images/11.jpg" alt="harbour-bridge-sydney"></div>
+                <div class="indiv-img"><img src="images/12.jpg" alt="black-duck"></div>
             </div>
         </div>
 
@@ -54,8 +65,8 @@
             <div class="about">
                 <div class="about-content">
                     <div class="text">
+                        <h2>what moves me</h2>
                         <h1>About me</h1>
-                        <h3>what moves me</h3>
                         <p>I am a Brazilian based in Canada, working with photography as a hobby on my spare time. I already lived 6 years in Australia where I discovered my passion about art, video and photography. In addition, I am passionate about music and I am guitarist and lead vocalist at Pink Octopus.</p>
                         <p>Now living in Vancouver, I am getting inspiration from British Columbia nature, weather and people, that has a big contrast compared to Australia.</p>
                         <p>Reach me out if you would like to get to know me more.</p>
@@ -71,35 +82,83 @@
             </div>
 
             <div class="testimonial">
-                <div class="testimonial-content">
+
+                <div>
+                    <h2>some clients words</h2>
                     <h1>Feedback</h1>
-                    <h3>some clients and friends words</h3>
                 </div>
-                <img class="quote" src="images/testimonial.svg">
-                <div class="feedback"></div>
-            </div>
+	
+                <input type="radio" id="i1" name="images" checked />
+                <input type="radio" id="i2" name="images" />
+                <input type="radio" id="i3" name="images" />
+                <input type="radio" id="i4" name="images" />
+                <input type="radio" id="i5" name="images" />	
+                
+                <div class="testimonial-content" id="one">			   
+                        <p class="testimonial-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum, ex vitae ullamcorper laoreet, leo ex hendrerit nulla, vel fermentum dui mauris at nunc. Suspendisse ut velit auctor lacus gravida semper rhoncus nec nunc.</p>
+                        <cite>Marcos Almeida</cite>
+
+                            <label class="prev" for="i5"><img src="images/arrow-1.svg"></label>
+                            <label class="next" for="i2"><img src="images/arrow-2.svg"></label>	
+                    
+                </div>
+                
+                <div class="testimonial-content" id="two">
+                        <p class="testimonial-p">Integer non hendrerit enim. Vivamus aliquam malesuada arcu, in imperdiet purus varius condimentum. Nunc augue elit, ultrices vitae dolor molestie, elementum efficitur risus.</p>
+                        <cite>John Doe</cite>
+                        
+                            <label class="prev" for="i1"><img src="images/arrow-1.svg"></label>
+                            <label class="next" for="i3"><img src="images/arrow-2.svg"></label>
+                    
+                </div>
+                        
+                <div class="testimonial-content" id="three">
+                        <p class="testimonial-p">Phasellus vitae sodales mi. Cras placerat aliquet nisl, ut tempor neque finibus maximus. Etiam non sapien pulvinar, commodo erat viverra, mollis ante.</p>	
+                        <cite>Richard N.</cite>
+
+                            <label class="prev" for="i2"><img src="images/arrow-1.svg"></label>
+                            <label class="next" for="i4"><img src="images/arrow-2.svg"></label>
+                </div>
+            
+                <div class="testimonial-content" id="four">
+                        <p class="testimonial-p">Sed tincidunt eros velit, bibendum vulputate dui tempor vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla ipsum eros, auctor sagittis velit eu, blandit ultricies tortor.</p>
+                        <cite>Elizabeth P.</cite>
+
+                            <label class="prev" for="i3"><img src="images/arrow-1.svg"></label>
+                            <label class="next" for="i5"><img src="images/arrow-2.svg"></label>
+                </div>
+            
+                <div class="testimonial-content" id="five">
+                        <p class="testimonial-p"> Maecenas fringilla bibendum dolor, in congue dui porttitor non. Duis vitae quam vel elit aliquam vehicula et pretium tellus. Mauris quis mauris hendrerit, volutpat mauris consequat, placerat libero. Curabitur volutpat vitae sem nec auctor. Suspendisse pharetra augue tincidunt, lobortis sapien et, tempus orci.</p>	
+                        <cite>Mari Silva</cite>
+
+                            <label class="prev" for="i4"><img src="images/arrow-1.svg"></label>
+                            <label class="next" for="i1"><img src="images/arrow-2.svg"></label>
+            
+                </div>
+            </div>  
             
             <div class="prices">
                 <div class="prices-content">
+                    <h2>special prices hit contact</h2>
                     <h1>Prices</h1>
-                    <h3>contact me for further details</h3>
                 </div>
                 <div class="cards">
                     <div class="card basic">
-                        <h2>Basic</h2>
-                        <h3 class="text-card">basics for a good start</h3>
+                        <h1>Basic</h1>
+                        <h2 class="text-card">basics for a good start</h2>
                         <p class="price">CAD$100</p>
                         <button class="card-btn">DETAILS</button>
                     </div>
                     <div class="card standard">
-                        <h2>Standard</h2>
-                        <h3 class="text-card standard">just what you need</h3>
+                        <h1 class="text-card standard">Standard</h1>
+                        <h2>just what you need</h2>
                         <p class="price standard">CAD$200</p>
                         <button class="card-btn">DETAILS</button>
                     </div>
                     <div class="card premium">
-                        <h2>Premium</h2>
-                        <h3 class="text-card">for a complete package</h3>
+                        <h1>Premium</h1>
+                        <h2 class="text-card">for a complete package</h2>
                         <p class="price">CAD$300</p>
                         <button class="card-btn">DETAILS</button>
                     </div>
