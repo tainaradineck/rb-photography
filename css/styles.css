@@ -1,8 +1,9 @@
 @import url("https://use.typekit.net/tcu4wwf.css");
 
+
 h1{
-    font-family: proxima-nova,sans-serif;
-    font-weight: 700;
+    font-family: gimlet-display, serif;
+    font-weight: 300;
     font-style: normal;
     font-size: 42px;
     margin:0;
@@ -10,17 +11,8 @@ h1{
 }
 
 h2{
-    font-family: proxima-nova,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    margin: 0;
-    font-size: 22px;
-    color: #fff;
-}
-
-h3{
-    font-family: merriweather,serif;
-    font-weight: 700;
+    font-family: fira-sans, sans-serif;
+    font-weight: 400;
     font-style: normal;
     font-size: 14px;
     margin-top:0;
@@ -30,8 +22,8 @@ h3{
 }
 
 p{
-    font-family: proxima-nova,sans-serif;
-    font-weight: 400;
+    font-family: fira-sans, sans-serif;
+    font-weight: 300;
     font-style: normal;
     font-size:16px;
     color: #fff;
@@ -39,6 +31,7 @@ p{
 
 .contact-button a, .burger-menu{
     cursor: pointer;
+    letter-spacing: 7px;
 }
 
 .contact-button a:hover{
@@ -56,12 +49,42 @@ body {
 
 .header {
     text-align:center;
-    padding:50px 25px;
+    padding:25px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.video-container .caption {
+    z-index: 1;
+    margin-left:70px;
+    text-align: left;
+    padding: 10px;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height:800px;
+    display: flex;
+    align-items: center;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.top-btn {
+    margin: 30px 0;
+}
 /*********************************************/
 /***************** Gallery *******************/
 /*********************************************/
@@ -72,25 +95,56 @@ body {
 }
 
 .column{   
-    flex: 1 1 17em;
-    max-width: 100%;
-    max-height: 100%;
+    flex-grow: 1;
+    flex-basis: 17em;
+}
+
+.indiv-img {
     overflow: hidden;
 }
 
-/*********** 01 Gallery Animation ************/
-.column img{
-    padding:4px;
+/************* 01 Logo entrance **************/
+
+.logo img{
+    width:60%;
+}
+
+.logo{
+    animation: logo 2s ease;
+}
+
+@keyframes logo {
+    0% {
+        margin-top: -250px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 0;
+        transform:scale(1.1);
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*********** 02 Gallery Animation ************/
+
+
+.indiv-img img {
     width:100%;
     vertical-align: middle;
     filter: grayscale(1);
-    transition: all .1s ease-in-out;
+    transition: transform 2s ease;
 }
 
-.column img:hover {
+.indiv-img img:hover {
     transform: scale(1.2);
     filter: none;
-  }
+}
+
 
 
 /****************** About ********************/
@@ -110,6 +164,9 @@ body {
 }
 
 button {
+    font-family: fira-sans, sans-serif;
+    font-weight: 300;
+    font-style: normal;
     background-color: #07ADA1;
     border-radius: 100px;
     padding: 15px 35px;
@@ -137,10 +194,6 @@ button:hover{
 /**************** Testimonial ****************/
 /*********************************************/
 
-.testimonial {
-    margin-top: 120px;
-    text-align: center;
-}
 
 img.quote {
     width: 40%;
@@ -154,8 +207,8 @@ p.feedback {
 }
 
 .feedback {
-    font-family: proxima-nova,sans-serif;
-    font-weight: 400;
+    font-family: fira-sans, sans-serif;
+    font-weight: 300;
     font-style: normal;
     font-size:16px;
     color: #fff;
@@ -170,23 +223,88 @@ p.feedback {
     content: "";
   }
 
+/********* 03 Testimonial Animation **********/
 
-/********* 02 Testimonial Animation **********/
+#i1, #i2, #i3, #i4, #i5{ display: none;}
 
-@keyframes slide {
-    0% {
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque dui, consectetur sit amet lectus eu, congue tincidunt libero. Nam in ipsum convallis, sollicitudin mi quis, consectetur enim. Aliquam aliquam risus id dolor semper aliquet.";
-    }
-    50% {
-      content: "Cras tincidunt massa at nisl efficitur, quis ullamcorper purus viverra. Duis leo purus, ornare sit amet augue dictum, hendrerit sodales nunc. Ut sagittis sit amet lorem non rutrum. Phasellus laoreet ligula nulla, ut suscipit augue finibus in.";
-    }
-    75% {
-      content: "Fusce magna justo, mollis sit amet elementum at, ultrices venenatis nunc. Aenean dapibus ante sodales, efficitur ante a, blandit nunc. Donec porta, ex quis faucibus tincidunt, nisl lectus congue orci, sed eleifend arcu mauris at augue.";
-    }
-    100% {
-      content: "Praesent sollicitudin urna eu lacinia porta. Maecenas ut felis sed orci maximus tristique vulputate a est. Duis et dolor sed nibh volutpat mattis sit amet eget ante.  Fusce quis iaculis arcu. Quisque teus eu, convallis ornare tortor.";
-    }
-  }
+.testimonial{
+    text-align: center;
+	margin: 0 auto;
+	margin-top: 120px;
+	position: relative;
+	height: 0;
+	padding-bottom: 20%;
+	user-select: none;
+	background-color: #000;
+}
+
+cite {
+    color: #fff;
+    font-family: fira-sans, sans-serif;
+    font-weight: 300;
+    font-style:italic;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.testimonial .testimonial-content{
+	position: absolute;
+	width: 100%;
+    margin-top: 30px;
+}
+
+.prev, .next{
+	width: 20%;
+	position: absolute;
+	top:0; 
+	z-index: 99;
+	transition: .45s;
+	cursor: pointer;
+	text-align: center;
+}
+
+.next{right:0;}
+.prev{left:0;}
+
+label span{
+	position: absolute;
+	font-size: 100pt;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover{
+    transition: .3s;
+}
+
+
+.testimonial-p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px
+}
+
+.testimonial-content{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}		
 
 
 /*********************************************/
@@ -211,8 +329,15 @@ h3.text-card {
     letter-spacing: 6px;
 }
 
-p.price.standard {
+p.standard {
     color: #000;
+}
+
+p.price {
+    font-family: gimlet-display, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
 }
 
 .card{
@@ -226,7 +351,7 @@ p.price.standard {
     background-color: #fff;
 }
 
-.card.standard h2 {
+.standard h1 {
     color:#000;
 }
 
@@ -245,11 +370,7 @@ p.footer {
 
 @media screen and (min-width:720px) {
     h1{
-        font-size: 62px;
-    }
-    
-    h2{
-        font-size: 42px;
+        font-size: 52px;
     }
 
     .about {
