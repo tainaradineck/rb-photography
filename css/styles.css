@@ -1,5 +1,8 @@
 @import url("https://use.typekit.net/tcu4wwf.css");
 
+* {
+    box-sizing: border-box;
+}
 
 h1{
     font-family: gimlet-display, serif;
@@ -17,7 +20,7 @@ h2{
     font-size: 14px;
     margin-top:0;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     color:#07ADA1;
 }
 
@@ -29,17 +32,118 @@ p{
     color: #fff;
 }
 
-.contact-button a, .burger-menu{
+#burger-menu {
     cursor: pointer;
+    height: 27px;
+    width: 30px;
+    margin: 50px;
+    overflow: visible;
+    position: relative;
+    z-index:3;
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: #fff;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 30px;
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 30px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 30px;
+  }
+  
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left:0;
+    transform: rotate(90deg);
+    opacity:0;
+    width:0;
+  }
+  
+  #menu{
+    z-index:2;
+    min-width:100%;
+    min-height:100%;
+    position: fixed;
+    top:0;
+    height:0;
+    visibility: hidden;
+    opacity: 0;
+    text-align:center;
+    padding-top:20px;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  #menu.overlay{
+    visibility: visible;
+    opacity: 1;
+    padding-top:100px;
+    background:rgba(0,0,0,0.8);
+  }
+  
+  #menu li{
+    list-style:none;
+  }
+  #menu a{
+    font-family: fira-sans, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color:#fff;
+    display:block;
+    font-size: 22px;
     letter-spacing: 7px;
-}
+    margin-bottom:30px;
+    text-decoration:none;
+  }
 
-.contact-button a:hover{
+  #menu a:hover{
     color:#07ADA1;
+    cursor: pointer;
+  }
+
+.contact-button img{
+    cursor: pointer;
+    width: 80%;
+    padding-right: 25px;
 }
 
-* {
-    box-sizing: border-box;
+.contact-button img:hover{
+   transform: scale(1.3);
+   transition: 1s ease-in-out;
+}
+
+.contact-button-desktop {
+    display: none;
 }
 
 body {
@@ -49,7 +153,6 @@ body {
 
 .header {
     text-align:center;
-    padding:25px;
     height: 160px;
     display: flex;
     align-items: center;
@@ -58,8 +161,8 @@ body {
 
 .video-container .caption {
     z-index: 1;
-    margin-left:70px;
-    text-align: left;
+    margin-left:30px;
+    text-align: center;
     padding: 10px;
 }
 
@@ -159,7 +262,7 @@ body {
 }
 
 .about-content {
-    margin: 20px 0;
+    margin: 70px 0;
     text-align: center;
 }
 
@@ -233,7 +336,7 @@ p.feedback {
 	margin-top: 120px;
 	position: relative;
 	height: 0;
-	padding-bottom: 20%;
+	padding-bottom: 75%;
 	user-select: none;
 	background-color: #000;
 }
@@ -313,7 +416,7 @@ label span{
 
 .prices {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .cards {
@@ -373,11 +476,39 @@ p.footer {
         font-size: 52px;
     }
 
+    .contact-button{
+        display: none;
+    }
+
+    .contact-button-desktop {
+        display: block;
+        padding-right: 25px;
+    }
+
+    .contact-button-desktop a{
+        cursor: pointer;
+        letter-spacing: 7px;
+    }
+    
+    .contact-button-desktop a:hover{
+        color:#07ADA1;
+    }
+
+    .video-container .caption {
+        text-align: left;
+        margin-left:70px
+    }
+
     .about {
         flex-direction: row;
         align-items: flex-end;
         margin-top: 120px;
     }
+
+    .about-content {
+        margin: 20px 0;
+    }
+
     .main-content{
         width:1280px;
         margin:auto;
@@ -418,5 +549,13 @@ p.footer {
 
     .about-content {
         text-align: left;
+    }
+
+    .testimonial {
+        padding-bottom: 20%;
+    }
+
+    .prices {
+        margin-top: 120px;
     }
 }
